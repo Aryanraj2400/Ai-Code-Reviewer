@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./Backend
+    ports:
+      - "5003:5000"
+    networks:
+      - app-net
+
+  frontend:
+    build: ./Frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app-net
+
+networks:
+  app-net:
