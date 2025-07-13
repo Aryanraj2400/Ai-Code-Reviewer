@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Clone Code') {
       steps {
-        git 'https://github.com/Aryanraj2400/Ai-Code-Reviewer.git'
+        git branch: 'main', url: 'https://github.com/Aryanraj2400/Ai-Code-Reviewer.git'
       }
     }
 
